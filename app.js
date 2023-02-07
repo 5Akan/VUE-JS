@@ -1,6 +1,19 @@
-const app = Vue.createApp({
-    //data,functions or templetes
-    template:`<h2>I am the template</h2>`
+const app = Vue.createApp({//object represents the root component in Vue, controls the app-element in htmls
+    //data,functions or templates are set here 
+
+    /**Below is the syntax for it to be accessed 
+     * as a variable
+     * function(){
+     * return{}
+     *  }
+     */
+    data(){//The function
+        return{
+            title:'The Final Empire',
+            author:'Brandon Sanderson',
+            age:50
+        }//returns an object
+    }
 });//Creates app
 
 app.mount('#app');  
