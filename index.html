@@ -11,9 +11,24 @@
 <body>
     <h1>Hello, Vue ♫</h1>
     <div id="app">
-        <p>{{ title}} - {{author}} -{{age}}
+        <p>{{ title}} - {{author}} - {{age}}
             <!--Above is how variables are called from Vue-->
         </p>
+    <button v-on:click = "age++">
+    <!--V-on is a directive( it allows us to react to events) 
+    in Vue, v means vue, on is the name of the 
+    directive(on-click, on-mousemove),
+    'click' is the type of event, so it is for on-click-->
+        Increase Age
+        </button>
+    <button v-on:click = "age--">
+             Decrease Age 
+    </button>
+    <div @click ="title = `Warrior`">
+        <!--@ replaces the v-on, since it allows us to 
+            react to events as well-->
+            Change Book Title
+    </div>
     </div>
     <script src="app.js"></script>
 </body>

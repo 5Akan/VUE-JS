@@ -18,7 +18,10 @@ const app = Vue.createApp({//object represents the root component in Vue, contro
 
 app.mount('#app');  
  /**
+  * 
      * After creating the app we mount it
      to the div element with id = app
      The view app only controls everything inside this div
     */
+
+//Reacting to events using Vue eg. a click event
