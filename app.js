@@ -1,4 +1,5 @@
-const app = Vue.createApp({//object represents the root component in Vue, controls the app-element in htmls
+const app = Vue.createApp(//Creates app
+    {//object represents the root component in Vue, controls the app-element in htmls
     //data,functions or templates are set here 
 
     /**Below is the syntax for it to be accessed 
@@ -8,13 +9,18 @@ const app = Vue.createApp({//object represents the root component in Vue, contro
      *  }
      */
     data(){//The function
-        return{
+        return{//returns an object
             title:'The Final Empire',
             author:'Brandon Sanderson',
             age:50
-        }//returns an object
+        }
+    },
+ methods:{//Here we can work on what the variables above can do 
+    changeTitle(){
+        console.log('Title');
     }
-});//Creates app
+ }
+});
 
 app.mount('#app');  
  /**
@@ -25,3 +31,4 @@ app.mount('#app');
     */
 
 //Reacting to events using Vue eg. a click event
+
