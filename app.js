@@ -12,14 +12,19 @@ const app = Vue.createApp(//Creates app
         return{//returns an object
             title:'The Final Empire',
             author:'Brandon Sanderson',
-            age:50
+            age:50,
+            showBooks:true
         }
     },
  methods:{//Here we can work on what the variables above can do 
-    changeTitle(value){
-        //this.title = 'Lord of the Rings';//'this' allows us to access the properties above
-        this.title = value;
+    toggleShowBooks(){
+        this.showBooks = !this.showBooks;
     }
+
+    // changeTitle(value){
+    //     //this.title = 'Lord of the Rings';//'this' allows us to access the properties above
+    //     this.title = value;
+    // }
  }
 });
 
@@ -32,4 +37,4 @@ app.mount('#app');
     */
 
 //Reacting to events using Vue eg. a click event
-
+//Conditional Rendering
