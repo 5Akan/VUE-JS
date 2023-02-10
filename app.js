@@ -16,8 +16,9 @@ const app = Vue.createApp(//Creates app
         }
     },
  methods:{//Here we can work on what the variables above can do 
-    changeTitle(){
-        console.log('Title');
+    changeTitle(value){
+        //this.title = 'Lord of the Rings';//'this' allows us to access the properties above
+        this.title = value;
     }
  }
 });
