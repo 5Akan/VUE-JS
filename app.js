@@ -19,6 +19,9 @@ const app = Vue.createApp(//Creates app
  methods:{//Here we can work on what the variables above can do 
     toggleShowBooks(){
         this.showBooks = !this.showBooks;
+    },
+    handleEvent(){
+        console.log('event');
     }
 
     // changeTitle(value){
@@ -26,6 +29,7 @@ const app = Vue.createApp(//Creates app
     //     this.title = value;
     // }
  }
+ 
 });
 
 app.mount('#app');  
