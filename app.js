@@ -20,8 +20,12 @@ const app = Vue.createApp(//Creates app
     toggleShowBooks(){
         this.showBooks = !this.showBooks;
     },
-    handleEvent(){
-        console.log('event');
+    handleEvent(a, data){
+        //This arguement 'a' is an optional event object happens when there is an event
+        console.log(a, a.type);
+        if(data){
+            console.log(data);
+        }
     }
 
     // changeTitle(value){
