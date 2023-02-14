@@ -13,10 +13,12 @@ const app = Vue.createApp(//Creates app
             title:'The Final Empire',
             author:'Brandon Sanderson',
             age:50,
-            showBooks:true
+            showBooks:true,
+            x:0,
+            y:0
         }
     },
- methods:{//Here we can work on what the variables above can do 
+ methods:{//Here we can work on what the variables(properties) above can do 
     toggleShowBooks(){
         this.showBooks = !this.showBooks;
     },
@@ -26,6 +28,12 @@ const app = Vue.createApp(//Creates app
         if(data){
             console.log(data);
         }
+    },
+    handleMouseMove(e){
+        //Use this to update the x,y properties via the optional event object
+        this.x = e.offsetX;
+        this.y = e.offsetY;
+        
     }
 
     // changeTitle(value){
