@@ -10,12 +10,17 @@ const app = Vue.createApp(//Creates app
      */
     data(){//The function
         return{//returns an object
-            title:'The Final Empire',
-            author:'Brandon Sanderson',
-            age:50,
             showBooks:true,
-            x:0,
-            y:0
+            books:[
+                {title:'The Final Empire',author:'Brandon Sanderson'},
+                {title:'The Way of the King',author:'Akanimoh Obot'},
+                {title:'Its all Love',author:'Jenna Ortega'}
+            ]
+            // title:'The Final Empire',
+            // author:'Brandon Sanderson',
+            // age:50,
+            // x:0,
+            // y:0
         }
     },
  methods:{//Here we can work on what the variables(properties) above can do 

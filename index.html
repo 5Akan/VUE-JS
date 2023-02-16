@@ -16,14 +16,19 @@
             display: inline-block;
         }
     </style>
-</head>
+</head> 
 <body>
     <h1>Hello, Vue ♫</h1>
     <div id="app">
         <div v-if = "showBooks"><!--Conditional Rendering-->
-            <p>{{ title}} - {{author}} - {{age}}
-                <!--Above is how variables are called from Vue-->
-            </p>
+            <ul>  
+                  <!--Outputing List Using v-for  -->
+                <li v-for = "book in books"> <!--for each item in the books array -->
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+                </li>  <!-- cycling through an array -->
+
+            </ul>
         </div>
       <button @click = "toggleShowBooks">
           <span v-if = "showBooks">Hide Books</span>
@@ -34,13 +39,13 @@
           
       </button>
       
-    <br>
+    <!-- <br> -->
     <!-- Mouse Events -->
-    <div class="box" @mouseover = "handleEvent($event, 5)">mouseover (enter)</div>
+    <!-- <div class="box" @mouseover = "handleEvent($event, 5)">mouseover (enter)</div>
     <div class="box" @mouseleave = "handleEvent">mouseleave</div>
     <div class="box" @dblclick = "handleEvent" >double click</div>
-    <div class="box" @mousemove = "handleMouseMove">Position - {{x}} {{y}}</div>
-    </br>
+    <div class="box" @mousemove = "handleMouseMove">Position - {{x}} {{y}}</div> -->
+    <!-- </br>  -->
     
     <!--
         <button v-on:click = "age++">
