@@ -10,6 +10,7 @@ const app = Vue.createApp(//Creates app
      */
     data(){//The function
         return{//returns an object
+            url:"www.netnaija.co.ng",
             showBooks:true,
             books:[
                 {title:'The Final Empire',author:'Brandon Sanderson'},

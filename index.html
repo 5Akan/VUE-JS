@@ -20,6 +20,11 @@
 <body>
     <h1>Hello, Vue ♫</h1>
     <div id="app">
+        <!-- Attribute Binding -->
+        <!-- Bind dynamic values from the JS to html attributes 
+        ,eg href is an attribute -->
+        <!-- Use v-bind:href or :href  -->
+        <a :href="url">web</a>
         <div v-if = "showBooks"><!--Conditional Rendering-->
             <ul>  
                   <!--Outputing List Using v-for  -->
