@@ -15,6 +15,10 @@
             margin: 20px;
             display: inline-block;
         }
+        .image{
+            width: 28vw;
+            height: 30vh;
+        }
     </style>
 </head> 
 <body>
@@ -24,11 +28,12 @@
         <!-- Bind dynamic values from the JS to html attributes 
         ,eg href is an attribute -->
         <!-- Use v-bind:href or :href  -->
-        <a :href="url">web</a>
+        <!-- <a :href="url">web</a> -->
         <div v-if = "showBooks"><!--Conditional Rendering-->
             <ul>  
                   <!--Outputing List Using v-for  -->
                 <li v-for = "book in books"> <!--for each item in the books array -->
+                    <img class="image" :src="book.imgg" :alt="book.title">
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
                 </li>  <!-- cycling through an array -->
