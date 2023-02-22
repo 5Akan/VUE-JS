@@ -32,7 +32,11 @@
         <div v-if = "showBooks"><!--Conditional Rendering-->
             <ul>  
                   <!--Outputing List Using v-for  -->
-                <li v-for = "book in books"> <!--for each item in the books array -->
+                <li v-for = "book in books" :class="{fav:book.isFav}"> 
+                    <!--for each item in the books array 
+                    The Class is a Dynamic class, using an object
+                    with key as fav which is the name of he class
+                     and the value is from JS-->
                     <img class="image" :src="book.imgg" :alt="book.title">
                     <h3>{{book.title}}</h3>
                     <p>{{book.author}}</p>
