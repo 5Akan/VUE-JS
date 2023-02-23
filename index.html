@@ -55,7 +55,8 @@
         <div v-if = "showBooks"><!--Conditional Rendering-->
             <ul>  
                   <!--Outputing List Using v-for  -->
-                <li v-for = "book in books" :class="{fav:book.isFav}"> 
+                <li  v-for = "book in filteredBooks" :class="{fav:book.isFav}" @click = "favBook(book)" > 
+
                     <!--for each item in the books array 
                     The Class is a Dynamic class, using an object
                     with key as fav which is the name of he class
