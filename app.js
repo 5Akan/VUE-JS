@@ -13,8 +13,8 @@ const app = Vue.createApp(//Creates app
             url:"www.netnaija.co.ng",
             showBooks:true,
             books:[
-                {title:'The Final Empire',author:'Brandon Sanderson', imgg: 'wallpaperflare.com_wallpaper (33).jpg', isFav:true},
-                {title:'The Way of the King',author:'Akanimoh Obot',imgg: 'wallpaperflare.com_wallpaper (36).jpg', isFav:false},
+                {title:'The Final Empire',author:'Brandon Sanderson', imgg: 'wallpaperflare.com_wallpaper (33).jpg', isFav:false},
+                {title:'The Way of the King',author:'Akanimoh Obot',imgg: 'wallpaperflare.com_wallpaper (36).jpg', isFav:true},
                 {title:'Its all Love',author:'Jenna Ortega',imgg: 'wallpaperflare.com_wallpaper (34).jpg', isFav:true}
             ]
             // title:'The Final Empire',
@@ -28,6 +28,11 @@ const app = Vue.createApp(//Creates app
     toggleShowBooks(){
         this.showBooks = !this.showBooks;
     },
+    favBook(book){
+        
+        book.isFav = !book.isFav;
+        
+        },
     handleEvent(a, data){
         //This arguement 'a' is an optional event object happens when there is an event
         console.log(a, a.type);
