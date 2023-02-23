@@ -51,6 +51,12 @@ const app = Vue.createApp(//Creates app
     //     //this.title = 'Lord of the Rings';//'this' allows us to access the properties above
     //     this.title = value;
     // }
+ },
+ computed:{
+     //Computed Property:A way of defining a data property depending on other data that we have already
+    filteredBooks(){//This is based data function or property which has books within
+        return this.books.filter((book)=>book.isFav)
+    }
  }
  
 });
