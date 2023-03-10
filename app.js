@@ -4,7 +4,7 @@ const app = Vue.createApp(//Creates app
 
     /**Below is the syntax for it to be accessed 
      * as a variable
-     * function(){
+     * data(){
      * return{}
      *  }
      */
